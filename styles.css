@@ -1,0 +1,130 @@
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Optional, prevents scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Work Sans";
+}
+/* body{
+
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+} */
+#upper{
+    position: absolute;
+    background-color:  hsl(275, 100%, 97%) ;
+    height: 60vh;
+    width: 100%;
+    z-index: -1;
+}
+#lower{
+    position: absolute;
+    top: 55%;
+    background-color: hsl(292, 42%, 14%);
+   height: 80vh;
+    width:100%;
+    z-index: -1;
+ 
+
+}
+
+.accordion{
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: white;
+    padding: 24px;
+
+    
+}
+.accordion-header{
+    z-index: 1;
+    height: fit-content;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+    color: hsl(292, 42%, 14%);
+    
+    
+
+}
+.accordion-header:hover{
+    color: #AF2CE8;
+
+
+}
+.accordion-item{
+    z-index: 1;
+    color: (292, 42%, 14%);
+    /* width: 70px; */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 20px;
+
+    /* margin: 20px; */
+
+}
+.accordion-body{
+    z-index: 1;
+    height: 0;
+    overflow: hidden;
+
+}
+.accordion-body.active{
+    z-index: 1;
+    display: block;
+    height: fit-content;
+    color:hsl(292, 33%, 22%); ;
+
+}
+main {
+    z-index: 0; /* Ensure it's above the background divs */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #faq{
+    position: absolute;
+    top: 30%;
+} */
+.title{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    margin-left: 30px;
+    font-family: "Work Sans";
+    font-size: 24px;
+
+
+
+}
+
+ 
+@media only screen and (max-width: 375px) {
+    .accordion{
+        width: 300px;
+
+    }
+
+  }
